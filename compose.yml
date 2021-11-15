@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  server:
+    user: root
+    deploy:
+      mode: global
+      restart_policy:
+        condition: none
+      placement:
+        constraints:
+          - node.labels.has-pos-printer == true
+    image: tbessenreither/pos-printer-server:latest
+    devices:
+      - /dev/usb/lp0:/dev/usb/lp0
+    ports:
+      - target: 1986
+        published: 1986
+        protocol: tcp
+      - target: 1987
+        published: 1987
+        protocol: tcp

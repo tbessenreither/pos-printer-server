@@ -1,0 +1,21 @@
+{
+	"name": "pos-printer-server",
+	"private": true,
+	"version": "1.1.3",
+	"description": "ADT ESC/POS Server for Node.js",
+	"repository": "https://github.com/tbessenreither/pos-printer-server",
+	"main": "main.js",
+	"keywords": [
+		"thermal",
+		"printer",
+		"ESC",
+		"POS"
+	],
+	"author": "Tobias Beßenreither (https://adt-it.de)",
+	"homepage": "https://adt-it.de",
+	"dependencies": {},
+	"scripts": {
+		"start": "node main.js",
+		"debug": "forever --watch --watchIgnore *.log ./main.js"
+	}
+}
